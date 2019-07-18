@@ -54,11 +54,11 @@ def check_cuda_torch_binary_vs_bare_metal(cuda_dir):
                            "https://github.com/NVIDIA/apex/pull/323#discussion_r287021798.  "
                            "You can try commenting out this check (at your own risk).")
 #         raise RuntimeError("Cuda extensions are being compiled with a version of Cuda that does " +
-                           "not match the version used to compile Pytorch binaries.  " +
-                           "Pytorch binaries were compiled with Cuda {}.\n".format(torch.version.cuda) +
-                           "In some cases, a minor-version mismatch will not cause later errors:  " +
-                           "https://github.com/NVIDIA/apex/pull/323#discussion_r287021798.  "
-                           "You can try commenting out this check (at your own risk).")
+#                            "not match the version used to compile Pytorch binaries.  " +
+#                            "Pytorch binaries were compiled with Cuda {}.\n".format(torch.version.cuda) +
+#                            "In some cases, a minor-version mismatch will not cause later errors:  " +
+#                            "https://github.com/NVIDIA/apex/pull/323#discussion_r287021798.  "
+#                            "You can try commenting out this check (at your own risk).")
 
 if "--cuda_ext" in sys.argv:
     from torch.utils.cpp_extension import CUDAExtension
